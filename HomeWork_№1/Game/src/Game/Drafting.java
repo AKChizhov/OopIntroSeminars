@@ -28,11 +28,7 @@ public class Drafting {
             count++;// Пока не наберем 10 машин
 
         }
-        /*
-         * for (BaseHero heroBaseHero : list) {
-         * heroBaseHero.tanks(list);
-         * }
-         */
+        
 
         return list;
     }

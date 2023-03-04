@@ -16,7 +16,7 @@ public class jagT_4_75 extends BaseHero {
     }
 
     @Override
-    public String step() {
+    public String about() {
         System.out.println(toString());
         return ("");
     }

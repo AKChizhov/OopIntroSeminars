@@ -17,7 +17,7 @@ public class T_5_75_70 extends BaseHero {
     }
 
     @Override
-    public String step() {
+    public String about() {
         System.out.println(toString());
         return ("");
 

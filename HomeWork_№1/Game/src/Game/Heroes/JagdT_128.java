@@ -1,5 +1,7 @@
 package Game.Heroes;
 
+
+
 public class JagdT_128 extends BaseHero {
 
     protected double scatter;
@@ -17,7 +19,7 @@ public class JagdT_128 extends BaseHero {
     }
 
     @Override
-    public String step() {
+    public String about() {
         System.out.println(toString());
         return ("");
 
@@ -25,6 +27,10 @@ public class JagdT_128 extends BaseHero {
 
     @Override
     public void getInfo() {
+        System.out.println("Tactical № "+ID);
+        
     }
+
+    
 
 }

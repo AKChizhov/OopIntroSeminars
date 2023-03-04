@@ -1,7 +1,6 @@
 package Game.Heroes;
 
 
-
 public class JagdT_128 extends BaseHero {
 
     protected double scatter;
@@ -31,6 +30,10 @@ public class JagdT_128 extends BaseHero {
         
     }
 
-    
+    @Override
+    public void attack(){
+       
+        System.out.println(damage+accuracy-scatter);
+    }
 
 }

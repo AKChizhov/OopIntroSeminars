@@ -15,7 +15,7 @@ public class Main {
         System.out.println(Subdivision.get(5));
         System.out.println("\n");
         Subdivision.forEach(n -> n.getInfo());
-        
+        Subdivision.forEach(n -> n.attack());
     }
 
 }

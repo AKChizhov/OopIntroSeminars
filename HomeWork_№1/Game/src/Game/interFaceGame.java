@@ -1,6 +1,5 @@
 package Game;
 
-import Game.Heroes.BaseHero;
 
 public interface interFaceGame {
     public void getInfo();
@@ -13,8 +12,5 @@ public interface interFaceGame {
         }
     }   
      
-    public static void Attack(BaseHero target) {
-    
-       
-    }
+   
 }

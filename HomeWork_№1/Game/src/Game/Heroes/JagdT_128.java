@@ -26,14 +26,20 @@ public class JagdT_128 extends BaseHero {
 
     @Override
     public void getInfo() {
-        System.out.println("Tactical № "+ID);
-        
+       // System.out.println( "JagdT_128 Tactical № "+ID);     
     }
 
     @Override
     public void attack(){
        
-        System.out.println(damage+accuracy-scatter);
+        System.out.printf("JagdT_128 Tactical №%d %s наносит ущерб %s \n",ID,name,damage+accuracy-scatter);
     }
+
+    @Override
+    public void attackAll(BaseHero baseHero){
+        cR = cR - 0.5;
+       
+    }
+
 
 }

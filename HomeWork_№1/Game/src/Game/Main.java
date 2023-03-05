@@ -12,10 +12,12 @@ public class Main {
         ArrayList<BaseHero> Subdivision = Drafting.MyRealSubdivision(11);// Формирование подразделения
         Printing.MyPrinting(Subdivision);
         //попытка бой по типам
-        System.out.println(Subdivision.get(5));
+       // System.out.println(Subdivision.get(5));
         System.out.println("\n");
         Subdivision.forEach(n -> n.getInfo());
         Subdivision.forEach(n -> n.attack());
+        Subdivision.forEach(n -> n.attackAll(BaseHero baseHero));
+        System.out.println("\n");
     }
 
 }

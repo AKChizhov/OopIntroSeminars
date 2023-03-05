@@ -25,9 +25,7 @@ public abstract class BaseHero implements interFaceGame {
         System.out.println("*******");
     }
 
-    /* 
-    public Object getAttack() {
-        return null;
+    public void attackAll(BaseHero enemy){
+        
     }
-    */
 }

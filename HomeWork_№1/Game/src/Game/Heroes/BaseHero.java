@@ -25,7 +25,8 @@ public abstract class BaseHero implements interFaceGame {
         System.out.println("*******");
     }
 
-    public void attackAll(BaseHero enemy){
-        
+    public void attackAll(BaseHero enemy,double cR, double strike){
+       enemy.cR = enemy.cR - strike;
+
     }
 }

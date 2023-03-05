@@ -16,7 +16,19 @@ public class Main {
         System.out.println("\n");
         Subdivision.forEach(n -> n.getInfo());
         Subdivision.forEach(n -> n.attack());
-        Subdivision.forEach(n -> n.attackAll(BaseHero baseHero));
+        //Subdivision.forEach(n -> n.attackAll(BaseHero baseHero));
+
+    
+        for(BaseHero item : Subdivision){
+            //item.getClass().getName()
+            System.out.println(item.getClass().getName());
+        }
+        BaseHero her1 = Subdivision.get(0);
+        BaseHero her2 = Subdivision.get(1);
+        her1.attackAll(her2, 100, 50);    
+        her2.attackAll(her1, 200, 100);   
+        System.out.println(Subdivision.get(0));
+        System.out.println(Subdivision.get(1));
         System.out.println("\n");
     }
 

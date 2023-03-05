@@ -32,10 +32,11 @@ public class T_5_75_70 extends BaseHero {
        
         System.out.printf("T_5_75_70 Tactical №%d %s наносит ущерб %s \n",ID,name,damage+accuracy+mobility);
     }
-
+    /* 
     @Override
     public void attackAll(BaseHero baseHero){
         cR = cR - 0.5;
     }
+    */
 
 }

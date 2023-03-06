@@ -2,7 +2,7 @@ package Game;
 
 import java.util.ArrayList;
 import Game.Heroes.*;
-
+import java.util.*;
 public class Main {
     public static void main(String[] args) throws Exception {
         System.out.print("\033[H\033[2J");// Очистка экрана;
@@ -20,8 +20,13 @@ public class Main {
 
     
         for(BaseHero item : Subdivision){
-            //item.getClass().getName()
+           
             System.out.println(item.getClass().getName());
+           if(item instanceof JagdT_128){
+            item = (JagdT_128) item;
+           }
+           
+
         }
         BaseHero her1 = Subdivision.get(0);
         BaseHero her2 = Subdivision.get(1);

@@ -5,7 +5,7 @@ public class jagT_4_75 extends BaseHero {
     protected double stealth;
 
     public jagT_4_75(long ID, String name, double stealth) {
-        super(ID, name, 50, 50, 50);
+        super(ID, name, 50, 500, 50);
         this.stealth = stealth;
     }
 

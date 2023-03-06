@@ -5,7 +5,7 @@ public class T_5_75_70 extends BaseHero {
     protected double mobility;
 
     public T_5_75_70(long ID, String name, double mobility) {
-        super(ID, name, 75, 75, 100);
+        super(ID, name, 75, 300, 100);
 
         this.mobility = mobility;
     }

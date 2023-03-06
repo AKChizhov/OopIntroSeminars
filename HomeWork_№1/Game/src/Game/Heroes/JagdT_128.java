@@ -6,7 +6,7 @@ public class JagdT_128 extends BaseHero {
     protected double scatter;
 
     public JagdT_128(long ID, String name, double scatter) {
-        super(ID, name, 100, 100, 100);
+        super(ID, name, 100, 1000, 100);
 
         this.scatter = scatter;
     }
@@ -34,12 +34,11 @@ public class JagdT_128 extends BaseHero {
        
         System.out.printf("JagdT_128 Tactical №%d %s наносит ущерб %s \n",ID,name,damage+accuracy-scatter);
     }
-    /*- 
-    @Override
-    public void attackAll(BaseHero baseHero){
-       
+    
+    public void attackAll(BaseHero enemy,double cR, double strike){
+       enemy.cR = enemy.cR - damage+accuracy-scatter;
        
     }
-    */
+    
 
 }

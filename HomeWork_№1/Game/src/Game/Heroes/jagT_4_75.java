@@ -26,15 +26,14 @@ public class jagT_4_75 extends BaseHero {
     }
 
     @Override
-    public void attack(){
+    public void powerStrike(){
        
         System.out.printf("jagT_4_75 Tactical №%d %s наносит ущерб %s \n",ID,name,damage+accuracy+stealth);
     }
-/*
-    @Override
-    public void attackAll(BaseHero baseHero){
-        cR = cR - 0.5;
-    }
 
-    */
+    
+    public void attackAll(BaseHero enemy){
+        enemy.cR = enemy.cR - damage + accuracy-stealth;
+
+    }
 }

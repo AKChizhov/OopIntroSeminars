@@ -28,15 +28,15 @@ public class T_5_75_70 extends BaseHero {
     }
 
     @Override
-    public void attack(){
+    public void powerStrike(){
        
         System.out.printf("T_5_75_70 Tactical №%d %s наносит ущерб %s \n",ID,name,damage+accuracy+mobility);
     }
-    /* 
-    @Override
-    public void attackAll(BaseHero baseHero){
-        cR = cR - 0.5;
+   
+    
+    public void attackAll(BaseHero enemy){
+       enemy.cR = enemy.cR - damage+accuracy + mobility;
     }
-    */
+    
 
 }

@@ -21,12 +21,11 @@ public abstract class BaseHero implements interFaceGame {
 
     }
 
-    public void attack(){
+    public void powerStrike(){
         System.out.println("*******");
     }
-
-    public void attackAll(BaseHero enemy,double cR, double strike){
-       enemy.cR = enemy.cR - strike;
-
+    
+    public void attackAll_1(BaseHero enemy) {
+        enemy.cR = enemy.cR - damage;
     }
 }

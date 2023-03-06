@@ -10,29 +10,20 @@ public class Main {
         System.out.println("\n\tThis is a Subdivision of 10 tanks. Specialization (type) received by Random\n");
         ArrayList<BaseHero> Subdivision = Drafting.MyRealSubdivision(11);// Формирование подразделения
         Printing.MyPrinting(Subdivision);
-        //попытка бой по типам
-       // System.out.println(Subdivision.get(5));
-        System.out.println("\n");
-        Subdivision.forEach(n -> n.getClass(). getName());
-        Subdivision.forEach(n -> n.attack());
-        //Subdivision.forEach(n -> n.attackAll(BaseHero baseHero));
-
-    
-        for(BaseHero item : Subdivision){
-           
-            System.out.println(item.getClass().getName());
-           if(item instanceof JagdT_128){
-            item = (JagdT_128) item;
-           }
-           
-
-        }
+        
+        Subdivision.forEach(n -> n.powerStrike());
+        
         BaseHero her1 = Subdivision.get(0);
         BaseHero her2 = Subdivision.get(1);
-        her1.attackAll(her2, 100, 50);    
-        her2.attackAll(her1, 200, 100);   
+        BaseHero her9 = Subdivision.get(9);
+       
+        her1.attackAll_1(her2);
+        her2.attackAll_1(her1);
+        her9.attackAll_1(her1) ;
+        System.out.println("\n");
         System.out.println(Subdivision.get(0));
         System.out.println(Subdivision.get(1));
+        System.out.println(Subdivision.get(9));
         System.out.println("\n");
     }
 

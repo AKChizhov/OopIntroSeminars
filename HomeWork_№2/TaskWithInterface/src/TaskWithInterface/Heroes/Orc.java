@@ -19,8 +19,8 @@ public class Orc implements InterfaceTask {
     
 
     public void about(){
-        System.out.printf("\nЭто Орк. Усталость =  %.2f, Жизненный цикл = %.2f",fatigue,lifeCycle);
-
+        System.out.printf("\n Это Орк. Усталость =  %.2f", fatigue);
+        System.out.printf("\n\t. Жизненный цикл = %.2f",lifeCycle);
     }  
 
 

@@ -1,9 +1,10 @@
 package TaskWithInterface.Heroes;
 
 import TaskWithInterface.InterfaceTask;
-
+import TaskWithInterface.App;
 public class WoodBilding implements InterfaceTask {
     
+    String colorHero;
     protected double lifeCycle; // Жизненный цикл - аналог очков жизни
 
     public WoodBilding(double lifeCycle){
@@ -17,7 +18,12 @@ public class WoodBilding implements InterfaceTask {
     
 
     public void about(){
-        System.out.printf("\nЭто деревянное строение. Жизненный цикл = %.2f\n\n",lifeCycle);
+        if (lifeCycle < 25) {colorHero = TaskWithInterface.ColorLib.ANSI_RED;
+        }else if(lifeCycle < 50 & lifeCycle >=25){colorHero = TaskWithInterface.ColorLib.ANSI_YELLOW;
+        }else {colorHero = TaskWithInterface.ColorLib.ANSI_GREEN;
+        }
+
+        System.out.printf("\n%s Это деревянное здание .Усталость = %.2f  %s", colorHero, lifeCycle, App.RESET);
 
     }  
 

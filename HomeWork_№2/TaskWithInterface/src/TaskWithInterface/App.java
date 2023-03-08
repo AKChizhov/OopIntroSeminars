@@ -8,7 +8,7 @@ public class App  {
     static String RED =TaskWithInterface.ColorLib.ANSI_RED;
     static String YELLOW =TaskWithInterface.ColorLib.ANSI_YELLOW ;
     static String GREEN =TaskWithInterface.ColorLib.ANSI_GREEN ;
-    static String RESET =TaskWithInterface.ColorLib.ANSI_RESET ;
+    public static String RESET =TaskWithInterface.ColorLib.ANSI_RESET ;
     
     
     public static void main(String[] args) throws Exception {

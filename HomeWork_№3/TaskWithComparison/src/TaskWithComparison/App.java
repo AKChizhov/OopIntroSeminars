@@ -5,7 +5,9 @@ import java.util.ArrayList;
 public class App {
     public static void main(String[] args) throws Exception {
         
-        ArrayList<Computers> myComputers = ComputerCreate.MyComputerCrete(20);
+        System.out.print("\033[H\033[2J");// Очистка экрана
+
+        ArrayList<Notebooks> myComputers = ComputerCreate.MyComputerCreate(15);
 
         ComputerPrinting.MyPrinting(myComputers);
 

@@ -3,7 +3,7 @@ package TaskWithComparison;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-public class SortComputer {
+public class SortComputerBy3param {
 
     static ArrayList<Notebooks> MySorting(ArrayList<Notebooks> list) {
 

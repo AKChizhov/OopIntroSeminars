@@ -1,6 +1,6 @@
 package TaskWithComparison;
 
-public class Notebooks {
+public class Notebooks implements Comparable<Notebooks> {
 
     protected String name;
     protected double price;
@@ -35,6 +35,10 @@ public class Notebooks {
 
     public int getfrequencyMemory() {
         return frequencyMemory;
+    }
+
+    public int compareTo(Notebooks o) {
+        return name.length() - o.getname().length();
     }
 
 }

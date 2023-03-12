@@ -3,7 +3,7 @@ package TaskWithComparison;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-public class SortComputerBy1param {
+public class SortComputerBy1param {//Сортировка по 1-у параметру
 
     static ArrayList<Notebooks> MySorting(ArrayList<Notebooks> list, String flag) {
 
@@ -14,7 +14,6 @@ public class SortComputerBy1param {
                     return (int) o1.getprice() - (int) o2.getprice();// По увеличению стоимости
                 if (flag == "price_down")
                     return (int) o2.getprice() - (int) o1.getprice();// По уменьшению стоимости
-
                 return 0;
             }
         });

@@ -1,5 +1,7 @@
 package TaskWithComparison;
 
+import java.util.Comparator;
+
 public class Notebooks implements Comparable<Notebooks> {
 
     protected String name;
@@ -36,9 +38,24 @@ public class Notebooks implements Comparable<Notebooks> {
     public int getfrequencyMemory() {
         return frequencyMemory;
     }
-
-    public int compareTo(Notebooks o) {
+ 
+    public int compareTo1(Notebooks o) {
         return name.length() - o.getname().length();
     }
 
+ 
+    public int compareTo(Notebooks o) {
+        Integer whatMetod =1;
+        if(whatMetod == 2){
+        Comparator<String> comparator = String.CASE_INSENSITIVE_ORDER;
+            return comparator.compare(this.name, o.name);   
+        } 
+        else { 
+            return name.length() - o.getname().length();
+        }   
+        
+    }
+
+    
+   
 }

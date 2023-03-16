@@ -30,7 +30,7 @@ public class App {
         goldenAppleBox.replaceFruitsToAnotherBox(appleBox);// +
         //appleBox.replaceFruitsToAnotherBox(goldenAppleBox);// - Ошибка
         System.out.println(" Коробка с золотыми яблоками - "+goldenAppleBox.getWeight()+" кг.");
-        System.out.println(" Коробка с яблоками - "+appleBox.getWeight()+" кг.");
+        System.out.println(" Коробка с яблоками после добавления золотых яблок - "+appleBox.getWeight()+" кг.");
         System.out.println(" Коробка с апельсинами - "+orangeBox.getWeight()+" кг.\n");
 
 

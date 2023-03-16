@@ -7,7 +7,6 @@ import java.util.List;
 public class Box<T extends Fruit> implements Iterable<T> {
 
     public List<T> fruits = new ArrayList<>();
-    //private Object box;
 
     public void add(T fruit) {
         fruits.add(fruit);
@@ -22,17 +21,14 @@ public class Box<T extends Fruit> implements Iterable<T> {
         return boxWeight;
     }
 
-
     public void replaceFruitsToAnotherBox(Box<T> to ) {
         for (T fruit : fruits) {
-            fruits.add(fruit);
+            to.add(fruit);
         }
     }
 
-
     @Override
     public Iterator<T> iterator() {
-
         return fruits.iterator();
     }
 

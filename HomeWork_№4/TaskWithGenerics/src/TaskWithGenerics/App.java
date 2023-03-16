@@ -6,27 +6,34 @@ import java.util.*;
 public class App {
     public static void main(String[] args) throws Exception {
        
-        //Box<String> stringBox = new Box<>();// -
+        //Box<String> stringBox = new Box<>();// - Ошибка
         Box< Apple> appleBox = new Box<>();// +
         Box<Orange> orangeBox = new Box<>();// +
         Box<GoldenApple> goldenAppleBox = new Box<>();// +
 
-        //orangeBox.add(new Apple(1));//-
+        //orangeBox.add(new Apple(1));//- Ошибка
         orangeBox.add(new Orange(5));
-        appleBox.add(new Apple(4));// +
-        //appleBox.add(new Orange(3));// -
-        appleBox.add(new GoldenApple(2));// +
-        System.out.println(appleBox.getWeight());
-
-        //goldenAppleBox.add(new Apple(1));// -
-        goldenAppleBox.add(new GoldenApple(2));// +
-        System.out.println(goldenAppleBox.getWeight());
+        appleBox.add(new Apple(3));// +
+        System.out.println(" Коробка с яблоками - "+appleBox.getWeight()+" кг.");
+        //appleBox.add(new Orange(3));// - Ошибка 
+        appleBox.add(new GoldenApple(3));// +
+        
+        //goldenAppleBox.add(new Apple(1));// - Ошибка
+        goldenAppleBox.add(new GoldenApple(4));// +
+        System.out.println(" Коробка с золотыми яблоками - "+goldenAppleBox.getWeight()+" кг.");
 
        // goldenAppleBox.moveTo(appleBox);// +
-        System.out.println(goldenAppleBox.getWeight());
-        System.out.println(appleBox.getWeight());
-
+        System.out.println(" Коробка с золотыми яблоками - "+goldenAppleBox.getWeight()+" кг.");
+        System.out.println(" Коробка с яблоками - "+appleBox.getWeight()+" кг.");
+        System.out.println(" Коробка с апельсинами - "+orangeBox.getWeight()+" кг.\n");
         
+        goldenAppleBox.replaceFruitsToAnotherBox(appleBox);// +
+        //appleBox.replaceFruitsToAnotherBox(goldenAppleBox);// - Ошибка
+        System.out.println(" Коробка с золотыми яблоками - "+goldenAppleBox.getWeight()+" кг.");
+        System.out.println(" Коробка с яблоками - "+appleBox.getWeight()+" кг.");
+        System.out.println(" Коробка с апельсинами - "+orangeBox.getWeight()+" кг.\n");
+
+
 
         //3*
         /* 
@@ -35,15 +42,8 @@ public class App {
         }
         */
 
-        
-        
-
-
        
     }
-
-
-
 
     
 }

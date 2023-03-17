@@ -12,8 +12,12 @@ public class Box<T extends Fruit> implements Iterable<T> {
         fruits.add(fruit);
     }
 
-    public int getWeight() {//Сумма
-        
+    public void delete(T fruit) {
+        fruits.clear();
+    }
+
+    public int getWeight() {// Сумма
+
         int boxWeight = 0;
         for (T fruit : fruits) {
             boxWeight += fruit.getWeight();
@@ -21,7 +25,7 @@ public class Box<T extends Fruit> implements Iterable<T> {
         return boxWeight;
     }
 
-    public void replaceFruitsToAnotherBox(Box<T> to ) {
+    public void replaceFruitsToAnotherBox(Box<T> to) {
         for (T fruit : fruits) {
             to.add(fruit);
         }

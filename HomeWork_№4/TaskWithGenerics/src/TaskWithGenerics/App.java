@@ -34,7 +34,10 @@ public class App {
 
         // goldenAppleBox.replaceFruitsToAnotherBox( appleBox);// + ????????????
         // appleBox.replaceFruitsToAnotherBox(goldenAppleBox);// - Ошибка
-
+        /*
+         * В методе replaceFruitsToBox после пересыпания нужно бы удалить из текущей коробки) А то вы пересыпать пересыпали,
+         *  а очистить не очистили. Плюс там нужен вот такой дженерик: <? super T>. Тогда и ошибка уйдет.
+        */
         for (GoldenApple fruit : goldenAppleBox) {
             appleBox.add(fruit);
         }

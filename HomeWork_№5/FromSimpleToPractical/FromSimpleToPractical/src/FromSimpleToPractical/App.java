@@ -135,7 +135,7 @@ public class App {
                     String robotMove = "robot" + ff;
                     if (robotMove != null) {
                         try {
-                            robotMove.move();
+                            robot4.move();
                         } catch (PositionException e) {
                             System.out.println("Не удалось переместить робота: " + e.getMessage());
                         }
@@ -163,18 +163,18 @@ public class App {
                     String robotMoveChange = "robot" + ff;
                     String commandMoveChange = arguments[1];
                     if (robotMoveChange != null) {
-                        robotMoveChange.changeDirection(Direction.LEFT);
+                        robot4.changeDirection(Direction.LEFT);
                     }
-                    System.out.println("\t4 " + robotMoveChange+" перемещен");
+                    System.out.println("\t4 " + robotMoveChange+" изменение направления движения");
                     break;
                 } catch (IllegalArgumentException e) {
-                    System.out.println("При перемещении робота возникло исключение: " + e.getMessage());
+                    System.out.println("При изменении направления движения робота возникло исключение: " + e.getMessage());
                 }
             } else {
                 System.out.println("Команда не найдена. Попробуйте еще раз");
             }
         }
-
+        sc.close();
 
     }
 

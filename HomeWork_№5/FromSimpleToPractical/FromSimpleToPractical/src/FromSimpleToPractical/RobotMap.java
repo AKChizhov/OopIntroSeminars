@@ -22,6 +22,11 @@ public class RobotMap {
         }
     }
 
+    public Robot findRobotById(UUID id){
+
+        return robots.get(id);
+    }
+
     public Robot createRobot(Point position) throws PositionException {
         checkPosition(position);
 
@@ -65,8 +70,8 @@ public class RobotMap {
             this.direction = Direction.TOP;
         }
 
-        public UUID getId() {
-            return id;
+        public Robot findRobotById(UUID id) {
+            return robots.get(id);
         }
 
         public Point getPosition() {

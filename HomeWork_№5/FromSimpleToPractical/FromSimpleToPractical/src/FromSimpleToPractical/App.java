@@ -2,6 +2,7 @@ package FromSimpleToPractical;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.UUID;
 
 import FromSimpleToPractical.RobotMap.Direction;
 import FromSimpleToPractical.RobotMap.Robot;
@@ -34,7 +35,7 @@ public class App {
         // change-direction id LEFT
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Введите команду для создания карты:");
+        System.out.println("Введите команду <create-map> для создания карты:");
         RobotMap map = null;
         while (true) {
             String command = sc.nextLine();
@@ -87,7 +88,6 @@ public class App {
             System.out.println("Не удалось переместить робота: " + e.getMessage());
         }
         System.out.println("\t2 " + robot2);
-
         try {
             robot3 = map.createRobot(new Point(5, 5));
             System.out.println("\t3 " + robot3);
@@ -96,7 +96,7 @@ public class App {
         }
         // -----------------
 
-        System.out.println("Введите команду для создания робота:");
+        System.out.println("Введите команду <create-robo> tдля создания робота:");
         while (true) {
             String command = sc.nextLine();
             if (command.startsWith("create-robot")) {
@@ -123,7 +123,7 @@ public class App {
             
         }
         //----------------------------------------
-        System.out.println("Введите команду для движения робота:");
+        System.out.println("Введите команду <move-robot> для движения робота:");
         while (true) {
             String command = sc.nextLine();
             if (command.startsWith("move-robot")) {
@@ -151,21 +151,23 @@ public class App {
         }
         
         //------------------------------------------------
-        System.out.println("Введите команду для изменения напрвления движения робота (change-direction id LEFT):");
+        System.out.println("Введите команду для изменения напрвления движения робота <change-direction id LEFT>:");
         while (true) {
             String command = sc.nextLine();
             if (command.startsWith("change-direction")) {
                 String[] split = command.split(" "); // [move-robot id]
-                String[] arguments = Arrays.copyOfRange(split, 1, split.length); // [id LEFT]
+                String[] arguments = Arrays.copyOfRange(split, 1, split.length); // [id LEFT (for ex)]
+                UUID robotId = UUID.fromString(arguments[0]);
+                RobotMap.Direction direction =RobotMap.Direction.valueOf(arguments[1]);
+                RobotMap.Robot robotById = map.findRobotById(robotId);
+                //System.out.println(robotById+"   "+direction);
+                //robotById.changeDirection(direction);
 
                 try {
-                    int ff = Integer.parseInt(arguments[0]);
-                    String robotMoveChange = "robot" + ff;
-                    String commandMoveChange = arguments[1];
-                    if (robotMoveChange != null) {
-                        robot4.changeDirection(Direction.LEFT);
+                    if (robotById != null) {
+                        robotById.changeDirection(direction);
                     }
-                    System.out.println("\t4 " + robotMoveChange+" изменение направления движения");
+                    System.out.println("\t4 " + robotById+" изменение направления движения на " +direction);
                     break;
                 } catch (IllegalArgumentException e) {
                     System.out.println("При изменении направления движения робота возникло исключение: " + e.getMessage());

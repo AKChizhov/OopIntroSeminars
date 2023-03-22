@@ -123,7 +123,7 @@ public class RobotMap {
 
         @Override
         public String toString() {
-            return String.format("-й  робот [%s] его координаты на поле - %s", id.toString(), position.toString());
+            return String.format("Робот [%s] его координаты на поле - %s", id.toString(), position.toString());
         }
     }
 

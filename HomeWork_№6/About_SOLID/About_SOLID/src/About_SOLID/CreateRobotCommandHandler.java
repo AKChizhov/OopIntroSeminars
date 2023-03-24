@@ -17,7 +17,7 @@ public class CreateRobotCommandHandler implements CommandHandler{
         if (hh> 0 & gg >0) {
             try {
               robot = map.createRobot(new Point(hh, gg));
-                System.out.println(" Робот создан");
+                System.out.println(" Робот "+robot+" ( в скобках координаты) создан");
             } catch (PositionException e) {
                 e.printStackTrace();
             }

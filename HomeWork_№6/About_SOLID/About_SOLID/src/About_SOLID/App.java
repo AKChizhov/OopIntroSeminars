@@ -32,7 +32,7 @@ public class App {
         // change-direction id LEFT
         // help
 
-        System.out.println("Введите команду для создания карты:");
+        System.out.println("Введите команду <create-map X Y > для создания карты:");
         RobotMap map = null;
         while (true) {
             String command = sc.nextLine();

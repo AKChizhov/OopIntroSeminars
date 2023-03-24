@@ -45,7 +45,6 @@ public class RobotMap {
         return robots.values().stream()  // Robot
                 .map(Robot::getPosition) // Point
                 .noneMatch(position::equals);
-
     }
 
     public class Robot {

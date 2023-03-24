@@ -20,7 +20,7 @@ public class MoveRobotCommandHandler implements CommandHandler {
                 System.out.println("");
                 e.printStackTrace();
             }
-            System.out.println("Робот с идентификаторо " + robotById+" передвинут");  
+            System.out.println("Робот с идентификаторо " + robotById+"( в скобках новые координаты) передвинут");
         }else {
             System.out.println("Робот с идентификаторо " + robotById+" не найден");
         }

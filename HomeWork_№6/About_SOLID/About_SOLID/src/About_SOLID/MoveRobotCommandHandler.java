@@ -14,7 +14,12 @@ public class MoveRobotCommandHandler implements CommandHandler {
         UUID robotId = UUID.fromString(args[0]);
         RobotMap.Robot robotById = map.findRobotById(robotId);
         if (robotById != null) {
-            robotById.move();
+            try {
+                robotById.move();
+            } catch (PositionException e) {
+                System.out.println("");
+                e.printStackTrace();
+            }
             System.out.println("Робот с идентификаторо " + robotById+" передвинут");  
         }else {
             System.out.println("Робот с идентификаторо " + robotById+" не найден");

@@ -14,9 +14,10 @@ public class CreateRobotCommandHandler implements CommandHandler{
         int hh = Integer.parseInt(args[0]);
         int gg = Integer.parseInt(args[1]);
         RobotMap.Robot robot = null;     
-        if (hh< 0 & gg<0) {
+        if (hh> 0 & gg >0) {
             try {
               robot = map.createRobot(new Point(hh, gg));
+                System.out.println(" Робот создан");
             } catch (PositionException e) {
                 e.printStackTrace();
             }

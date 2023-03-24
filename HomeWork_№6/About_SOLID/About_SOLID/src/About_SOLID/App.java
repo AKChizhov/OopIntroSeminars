@@ -3,10 +3,6 @@ package About_SOLID;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-import About_SOLID.ChangeDirectionCommandHandler;
-import About_SOLID.CreateRobotCommandHandler;
-import About_SOLID.MoveRobotCommandHandler;
-import About_SOLID.CommandManager;
 
 public class App {
 
@@ -43,7 +39,6 @@ public class App {
             if (command.startsWith("create-map")) {
                 String[] split = command.split(" "); // [create-map 3 5]
                 String[] arguments = Arrays.copyOfRange(split, 1, split.length); // [3 5]
-                
 
                 try {
                     map = new RobotMap(Integer.parseInt(arguments[0]), Integer.parseInt(arguments[1]));
@@ -66,13 +61,14 @@ public class App {
         CommandManager commandManager = new CommandManager(map, handlers);
 
         System.out.println("ИГРАЕМ...");
-        System.out.println("Список допустимых команд: ...");
+        System.out.println("Список допустимых команд: ...\n\tcreate-robot X Y ,\n\tmove-robot ID,\n\tchange-direction ID DIRECTION");
+
         while (true) {
             String command = sc.nextLine();
-
+            System.out.println("\tВведена команда : "+command);
                 commandManager.handleCommand(command);
-
         }
+
     }
 
 }

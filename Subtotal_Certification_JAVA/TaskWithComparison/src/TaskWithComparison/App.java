@@ -2,6 +2,11 @@ package TaskWithComparison;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.*;
+import java.nio.file.*;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.charset.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -31,6 +36,9 @@ public class App {
         Messages.SortPrice(" кол-ва букв в названии ", " уменьшению ", "\u001B[36m");
         Collections.sort(myComputers, Collections.reverseOrder());
         ComputerPrinting.MyPrinting(myComputers);
+
+        System.out.println(myComputers);
+        
 
     }
 

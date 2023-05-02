@@ -44,3 +44,7 @@
     
 <image src="1.jpg">
 <image src="2.jpg">
+<image src="3.jpg">
+<image src="4.jpg">
+
+**ВАЖНО !!! Проект по принципам ООП**

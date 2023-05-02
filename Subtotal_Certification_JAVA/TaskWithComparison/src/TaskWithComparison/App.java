@@ -2,11 +2,7 @@ package TaskWithComparison;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.*;
-import java.nio.file.*;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.nio.charset.*;
+
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -37,9 +33,11 @@ public class App {
         Collections.sort(myComputers, Collections.reverseOrder());
         ComputerPrinting.MyPrinting(myComputers);
 
-        System.out.println(myComputers);
+        //System.out.println(myComputers);
+        System.out.println(myComputers.get(2));
+        int nn = 2;
+        System.out.println(myComputers.get(nn).toString());
         
-
     }
 
 }
